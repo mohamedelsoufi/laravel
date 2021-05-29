@@ -1,34 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eee166c8-5338-4481-9fc8-8f14a30dec99" name="Default Changelist" comment="rr">
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/OfferRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/laravellocalization.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/multilang" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ar/alerts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ar/statics.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/alerts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/statics.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/starter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/starter.iml" afterDir="false" />
+    <list default="true" id="eee166c8-5338-4481-9fc8-8f14a30dec99" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/messeges.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/messeges.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/messeges.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/messeges.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/offers/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/offers/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/statics.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/statics.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/statics.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/statics.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +194,7 @@
       <workItem from="1622056055200" duration="144000" />
       <workItem from="1622057155429" duration="12232000" />
       <workItem from="1622287324072" duration="9331000" />
-      <workItem from="1622312195896" duration="11107000" />
+      <workItem from="1622312195896" duration="11364000" />
     </task>
     <task id="LOCAL؜٠٠٠٠١" summary="rr">
       <created>1622070445532</created>
@@ -226,7 +202,13 @@
       <option name="presentableId" value="LOCAL؜٠٠٠٠١" />
       <updated>1622070445532</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL؜٠٠٠٠٢" summary="multiLang">
+      <created>1622324565875</created>
+      <option name="number" value="LOCAL؜٠٠٠٠٢" />
+      <option name="presentableId" value="LOCAL؜٠٠٠٠٢" />
+      <updated>1622324565875</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +232,8 @@
     <MESSAGE value="kk" />
     <MESSAGE value="kk2" />
     <MESSAGE value="rr" />
-    <option name="LAST_COMMIT_MESSAGE" value="rr" />
+    <MESSAGE value="multiLang" />
+    <option name="LAST_COMMIT_MESSAGE" value="multiLang" />
   </component>
   <component name="WindowStateProjectService">
     <state x="397" y="0" key="#PHP" timestamp="1621990589342">
@@ -273,10 +256,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="367" y="25" width="645" height="688" key="#phpunit.xml/0.0.1366.738@0.0.1366.738" timestamp="1621990604568" />
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1622320770353">
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1622324553942">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1622320770353" />
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1622324553942" />
     <state x="463" y="125" key="FileChooserDialogImpl" timestamp="1621640235659">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

@@ -25,6 +25,6 @@ return [
     "Register with Facebook" => "Register with Facebook",
     "Verify Your Email Address" => "Verify Your Email Address",
     "Reset Password" => "Reset Password",
-    "SendPasswordReset" => "Send Password Reset",
+
 
 ];

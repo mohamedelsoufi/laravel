@@ -25,5 +25,4 @@ return [
     "Register with Facebook" => "التسجيل بإستخدام الفيس بوك",
     "Verify Your Email Address" => "برجاء تأكيد البريد الإلكترونى الخاص بك",
     "Reset Password" => "إعادة ضبط كلمة المرور",
-    "SendPasswordReset" => "إرسال طلب إعادة تعيين كلمة المرور",
 ];
