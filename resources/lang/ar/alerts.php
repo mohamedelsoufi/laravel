@@ -13,7 +13,10 @@ return [
     |
     */
 
-    'previous' => '&laquo; Previous',
-    'next' => 'Next ',
-
+    "OfferNameRequired" => "إسم العرض مطلوب",
+    "OfferNameMAx" => "لقد تعديت الحد الأقصى من الحروف",
+    "OfferPriceRequired" => " سعر العرض مطوب",
+    "OfferPriceNumeric" => "االرقم الذى أدخلته غير صحيح",
+    "OfferDetailsRequired" => " تفاصيل العرض مطلوبة",
+    "OfferDetailsMax" => "لقد تعديت الحد الأقصى من الحروف",
 ];

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\SocialController;
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,17 +15,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 // Route::get('/test1', function () {
 //     return 'Welcome';
 // })->name('a');
 
-Route::get('/show-number/{id}', function ($id) {
-    return $id;
-})->name('b');
+//Route::get('/show-number/{id}', function ($id) {
+//    return $id;
+//})->name('b');
 
 // Route::get('/show-string/{id?}', function () {
 //     return 'wel';
@@ -85,18 +86,27 @@ Route::get('/show-number/{id}', function ($id) {
 //     return view('landing');
 // });
 
-Auth::routes(['verify'=>true]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
 
-Route::get('/redirect/{service}', 'SocialController@redirect');
-Route::get('/callback/{service}', 'SocialController@callback');
+Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
+    /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
+    Route::get('/', function () {
+        return view('welcome');
+    });
 
-Route::get('fillable','CrudController@getOffers');
+    Auth::routes(['verify' => true]);
 
-Route::group(['prefix'=>'offers'], function (){
-    //Route::get('store', 'CrudController@store');
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
 
-    Route::get('create','CrudController@create');
-    Route::post('store','CrudController@store') -> name('offers.store');
+    Route::get('/redirect/{service}', 'SocialController@redirect');
+    Route::get('/callback/{service}', 'SocialController@callback');
+
+    Route::get('fillable', 'CrudController@getOffers');
+
+
+    Route::group(['prefix' => 'offers'], function () {
+
+        Route::post('store', 'CrudController@store')->name('offers.store');
+        Route::get('create', 'CrudController@create');
+    });
 });
