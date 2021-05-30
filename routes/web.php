@@ -88,7 +88,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 
 
-Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
+Route::group(['prefix' => LaravelLocalization::setLocale(),'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]], function() {
     /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
     Route::get('/', function () {
         return view('welcome');
@@ -107,6 +107,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
     Route::group(['prefix' => 'offers'], function () {
 
         Route::post('store', 'CrudController@store')->name('offers.store');
-        Route::get('create', 'CrudController@create');
+        Route::get('create', 'CrudController@create')->name('offers.create');
+        Route::get('index', 'CrudController@index')->name('offers.index');
+        Route::get('edit/{id}', 'CrudController@edit');
+        Route::post('update/{id}', 'CrudController@update')->name('offers.update');
     });
 });

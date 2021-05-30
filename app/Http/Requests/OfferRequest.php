@@ -24,20 +24,26 @@ class OfferRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=> 'required|max:100|unique:offers,name',
+            'name_ar'=> 'required|max:100|unique:offers,name_ar',
+            'name_en'=> 'required|max:100|unique:offers,name_en',
             'price'=> 'required|numeric',
-            'details'=> 'required|max:200',
+            'details_ar'=> 'required|max:200',
+            'details_en'=> 'required|max:200',
         ];
     }
 
     public function messages(){
         return [
-            "name.required" => __('alerts.OfferNameRequired'),
-            "name.max" => trans('alerts.OfferNameMAx'),
+            "name_ar.required" => __('alerts.OfferNameRequired'),
+            "name_en.required" => __('alerts.OfferNameRequired'),
+            "name_ar.max" => trans('alerts.OfferNameMAx'),
+            "name_en.max" => trans('alerts.OfferNameMAx'),
             "price.required" => __('alerts.OfferPriceRequired'),
             "price.numeric" => __('alerts.OfferPriceNumeric'),
-            "details.required" => __('alerts.OfferDetailsRequired'),
-            "details.max" => __('alerts.OfferDetailsMax'),
+            "details_ar.required" => __('alerts.OfferDetailsRequired'),
+            "details_en.required" => __('alerts.OfferDetailsRequired'),
+            "details_ar.max" => __('alerts.OfferDetailsMax'),
+            "details_en.max" => __('alerts.OfferDetailsMax'),
         ];
     }
 }

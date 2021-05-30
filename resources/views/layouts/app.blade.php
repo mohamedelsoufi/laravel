@@ -46,6 +46,13 @@
                                 </a>
                             </li>
                         @endforeach
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('offers.index') }}">{{ __('statics.OfferIndex') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('offers.create') }}">{{ __('statics.create') }}</a>
+                        </li>
+
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">

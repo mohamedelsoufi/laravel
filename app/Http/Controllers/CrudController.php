@@ -6,10 +6,15 @@ use App\Http\Requests\OfferRequest;
 use App\Models\Offer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use App\Traits\OfferTrait;
 
 class CrudController extends Controller
 {
-    public function getOffers(){
+    use OfferTrait;
+
+    public function getOffers()
+    {
         return Offer::get();
     }
 
@@ -25,6 +30,7 @@ class CrudController extends Controller
     {
         return view('offers.create');
     }
+
     public function store(OfferRequest $request)
     {
         //validate data
@@ -39,12 +45,44 @@ class CrudController extends Controller
 //            return redirect()->back()->withErrors($validation)->withInputs($request->all());
 //        }
         // inserting data to Db
+
+        $file_name = $this -> saveImages($request -> image, 'images/offers');
         Offer::create([
-            'name'=> $request->name,
-            'price'=> $request->price,
-            'details'=> $request->details,
+            'name_ar' => $request->name_ar,
+            'name_en' => $request->name_en,
+            'price' => $request->price,
+            'details_ar' => $request->details_ar,
+            'details_en' => $request->details_en,
+            'image' => $file_name,
         ]);
-        return redirect()->back()->with(['success'=>'Created Successfully']);
+        return redirect()->back()->with(['success' => 'Created Successfully']);
+    }
+
+    public function index()
+    {
+        $offers = Offer::select('id',
+            'name_'.  LaravelLocalization::getCurrentLocale() .' as name',
+            'price',
+            'details_'.  LaravelLocalization::getCurrentLocale() .' as name') -> get();
+        return view('offers.index', compact('offers'));
+    }
+
+    public function edit($id){
+//        Offer::findOrFail($id);
+        $offer =Offer::find($id);
+        if (!$offer){
+            return redirect()->back();
+        }
+        $offerWithID = Offer::select('id','name_ar','name_en','price','details_ar','details_en')->find($id);
+        return view('offers.edit',compact('offerWithID'));
+    }
+    public function update(OfferRequest $request, $id){
+        //check if id inserted
+        $offer = Offer::find($id);
+        if(!$offer)
+            return redirect()->back();
+        $offer -> update($request->all());
+        return redirect()->back()->with(['success'=>'Offer Updated Successfully']);
     }
 //    protected function getMessages(){
 //        return [
@@ -64,4 +102,6 @@ class CrudController extends Controller
 //            'details'=> 'required|max:200',
 //        ];
 //    }
+
+
 }

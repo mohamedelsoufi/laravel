@@ -4,8 +4,12 @@ return [
 
     "AddOffer" => "Add your offer",
     "OfferSaved" => "Offer Saved Successfully",
+    "OfferName_ar" => "Offer Name in Arabic",
+    "OfferName_en" => "Offer Name in English",
     "OfferName" => "Offer Name",
     "OfferPrice" => "Offer Price",
+    "OfferDetails_ar" => " Offer Details in Arabic",
+    "OfferDetails_en" => " Offer Details in English",
     "OfferDetails" => " Offer Details",
     "OfferSave" => "Add Offer",
     "Login" => "Login",
@@ -25,6 +29,12 @@ return [
     "Register with Facebook" => "Register with Facebook",
     "Verify Your Email Address" => "Verify Your Email Address",
     "Reset Password" => "Reset Password",
-
-
+    "OfferIndex" => "Offers",
+    "create" => "Create Offer",
+    "edit" => "Edit Offer",
+    "operation" => "Operation",
+    "Update" => "Update",
+    "EditOffer" => "Edit Offer",
+    "OfferUpdated" => "Offer updated successfully",
+    "image" => "Choose image for offer",
 ];
