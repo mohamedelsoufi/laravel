@@ -34,7 +34,9 @@ return [
     "edit" => "تعديل عرض",
     "operation" => "العمليات",
     "Update" => "تحديث",
-    "EditOffer" => "تعديل العرض",
+    "EditOffer" => "تعديل",
     "OfferUpdated" => "تم تعديل العرض بنجاح",
     "image" => "اختر صورة العرض",
+    "youtube" => "يوتيوب",
+    "delete" => "مسح",
 ];

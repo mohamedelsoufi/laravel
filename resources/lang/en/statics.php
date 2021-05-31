@@ -31,10 +31,12 @@ return [
     "Reset Password" => "Reset Password",
     "OfferIndex" => "Offers",
     "create" => "Create Offer",
-    "edit" => "Edit Offer",
+    "edit" => "Edit",
     "operation" => "Operation",
     "Update" => "Update",
     "EditOffer" => "Edit Offer",
     "OfferUpdated" => "Offer updated successfully",
     "image" => "Choose image for offer",
+    "youtube" => "youtube",
+    "delete" => "Delete",
 ];

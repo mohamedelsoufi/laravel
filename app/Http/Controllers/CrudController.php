@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\VideoViewer;
 use App\Http\Requests\OfferRequest;
 use App\Models\Offer;
+use App\Models\Video;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -33,19 +35,6 @@ class CrudController extends Controller
 
     public function store(OfferRequest $request)
     {
-        //validate data
-//        $roles = $this->getRoles();
-//
-//        $messages = $this->getMessages();
-//
-//        $validation = Validator::make($request->all(), $roles,$messages);
-//
-//        if ($validation -> fails()){
-//            // return $validation ->errors();
-//            return redirect()->back()->withErrors($validation)->withInputs($request->all());
-//        }
-        // inserting data to Db
-
         $file_name = $this -> saveImages($request -> image, 'images/offers');
         Offer::create([
             'name_ar' => $request->name_ar,
@@ -63,7 +52,8 @@ class CrudController extends Controller
         $offers = Offer::select('id',
             'name_'.  LaravelLocalization::getCurrentLocale() .' as name',
             'price',
-            'details_'.  LaravelLocalization::getCurrentLocale() .' as name') -> get();
+            'details_'.  LaravelLocalization::getCurrentLocale() .' as details',
+            'image')-> get();
         return view('offers.index', compact('offers'));
     }
 
@@ -83,6 +73,20 @@ class CrudController extends Controller
             return redirect()->back();
         $offer -> update($request->all());
         return redirect()->back()->with(['success'=>'Offer Updated Successfully']);
+    }
+
+    public function delete($id){
+        $offer = Offer::find($id);
+        if (!$offer)
+            return redirect()->back()->with(['error'=> __('messages.Offer error')]);
+        $offer -> delete();
+        return redirect()->route('offers.index',$id)->with(['success'=> __('messages.deleted success')]);
+    }
+
+    public function getVideo(){
+        $video = Video::first();
+        event(new VideoViewer($video));
+        return view('video',compact('video'));
     }
 //    protected function getMessages(){
 //        return [

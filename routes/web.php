@@ -110,6 +110,11 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),'middleware' => [ 'lo
         Route::get('create', 'CrudController@create')->name('offers.create');
         Route::get('index', 'CrudController@index')->name('offers.index');
         Route::get('edit/{id}', 'CrudController@edit');
+        Route::get('delete/{id}', 'CrudController@delete')->name('offers.delete');
         Route::post('update/{id}', 'CrudController@update')->name('offers.update');
+    });
+
+    Route::group(['middleware'=>'auth'],function (){
+        Route::get('youtube','CrudController@getVideo')->name('youtube');
     });
 });

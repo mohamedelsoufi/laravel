@@ -21,4 +21,6 @@ return [
     'click here to request another' => 'click here to request another',
     'Please confirm your password before continuing.' => 'Please confirm your password before continuing.',
     'Send Password Reset Link' => 'Send Password Reset Link',
+    'Offer error' => 'Offer not found ya beeh',
+    'deleted success' => 'Offer deleted successfully',
 ];

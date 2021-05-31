@@ -21,4 +21,6 @@ return [
     'click here to request another' => 'إضغط هنا لإجراء طلب اخر',
     'Please confirm your password before continuing.' => 'برجاء تأكيد كلمة المرور قبل الاستمرار .',
     'Send Password Reset Link' => 'إرسال رابط إعادة ضبط كلمة المرور',
+    'Offer error' => 'العرض غير موجود',
+    'deleted success' => 'تم مسح العرض بنجاح',
 ];
