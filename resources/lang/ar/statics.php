@@ -39,4 +39,9 @@ return [
     "image" => "اختر صورة العرض",
     "youtube" => "يوتيوب",
     "delete" => "مسح",
+    "ajaxOffers" => "إنشاء عرض أجاكس",
+    "OfferError" => "خطأ فى التسجيل",
+    "ajaxIndex" => "عروض أجاكس",
+    "OfferDeletedSuc" => "تم حذف العرض بنجاح",
+    "OfferDeletedErr" => "خطأ... برجاء المحاولة مرة أخرى",
 ];

@@ -114,7 +114,16 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),'middleware' => [ 'lo
         Route::post('update/{id}', 'CrudController@update')->name('offers.update');
     });
 
-    Route::group(['middleware'=>'auth'],function (){
-        Route::get('youtube','CrudController@getVideo')->name('youtube');
+    Route::group(['middleware' => 'auth'], function () {
+        Route::get('youtube', 'CrudController@getVideo')->name('youtube');
+    });
+
+    Route::group(['prefix' => 'ajax-offers'], function () {
+        Route::get('create', 'OfferController@create')->name('ajaxOffers.create');
+        Route::post('store', 'OfferController@store')->name('ajaxOffers.store');
+        Route::get('index', 'OfferController@index')->name('ajaxOffers.index');
+        Route::post('delete', 'OfferController@delete')->name('ajaxOffers.delete');
+        Route::get('edit/{id}', 'OfferController@edit')->name('ajaxOffers.edit');
+        Route::post('update', 'OfferController@update')->name('ajaxOffers.update');
     });
 });

@@ -39,4 +39,9 @@ return [
     "image" => "Choose image for offer",
     "youtube" => "youtube",
     "delete" => "Delete",
+    "ajaxOffers" => "Ajax Offers Create",
+    "OfferError" => "Error While Saving",
+    "ajaxIndex" => "Ajax Offers",
+    "OfferDeletedSuc" => "Offer Deleted Successfully",
+    "OfferDeletedErr" => "Error... Please Try Again Later !",
 ];
