@@ -26,11 +26,18 @@ class IncreaseCount
      */
     public function handle(VideoViewer $event)
     {
-        $this -> increaseViewer($event -> video);
+        if (!session()->has('videoIsVisited')) {
+            $this->increaseViewer($event->video);
+        } else {
+            return false;
+        }
     }
 
-    function increaseViewer($video){
-        $video -> viewers = $video -> viewers + 1;
-        $video -> save();
+    function increaseViewer($video)
+    {
+        $video->viewers = $video->viewers + 1;
+        $video->save();
+
+        session()->put('videoIsVisited', $video->id);
     }
 }

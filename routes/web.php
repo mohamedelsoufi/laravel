@@ -98,12 +98,14 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),'middleware' => [ 'lo
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
 
+###################### Begin Facebook register #########################################################################
     Route::get('/redirect/{service}', 'SocialController@redirect');
     Route::get('/callback/{service}', 'SocialController@callback');
+###################### End Facebook register ###########################################################################
 
     Route::get('fillable', 'CrudController@getOffers');
 
-
+###################### Begin CRUD ######################################################################################
     Route::group(['prefix' => 'offers'], function () {
 
         Route::post('store', 'CrudController@store')->name('offers.store');
@@ -113,11 +115,16 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),'middleware' => [ 'lo
         Route::get('delete/{id}', 'CrudController@delete')->name('offers.delete');
         Route::post('update/{id}', 'CrudController@update')->name('offers.update');
     });
+###################### End CRUD ########################################################################################
 
+###################### Begin Youtube Viewers Counter ###################################################################
     Route::group(['middleware' => 'auth'], function () {
         Route::get('youtube', 'CrudController@getVideo')->name('youtube');
     });
+###################### End Youtube Viewers Counter #####################################################################
 
+
+###################### Begin Ajax CRUD #################################################################################
     Route::group(['prefix' => 'ajax-offers'], function () {
         Route::get('create', 'OfferController@create')->name('ajaxOffers.create');
         Route::post('store', 'OfferController@store')->name('ajaxOffers.store');
@@ -126,14 +133,29 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),'middleware' => [ 'lo
         Route::get('edit/{id}', 'OfferController@edit')->name('ajaxOffers.edit');
         Route::post('update', 'OfferController@update')->name('ajaxOffers.update');
     });
+###################### End Ajax CRUD ###################################################################################
+
+
+###################### Begin Middleware ################################################################################
 
     Route::group(['middleware' => 'CheckAge', 'namespace' => 'Auth'], function () {
         Route::get('adults', 'CustomAuthController@adult')->name('adults');
 
     });
+###################### End Middleware ##################################################################################
 
+###################### Begin Authentication and Guards #################################################################
     Route::get('admin/admin', 'Auth\CustomAuthController@admin')->middleware('auth:admin')->name('admin');
     Route::get('front/user', 'Auth\CustomAuthController@user')->middleware('auth:web')->name('user');
-    Route::get('admin/login', 'Auth\CustomAuthController@login')->name('login');
-    Route::post('admin/login', 'Auth\CustomAuthController@Checklogin')->name('save.admin.login');
+    Route::get('admin/login', 'Auth\CustomAuthController@login')->name('Admin.login');
+    Route::post('admin/logins', 'Auth\CustomAuthController@Checklogin')->name('save.admin.login');
+###################### End Authentication and Guards ###################################################################
+
+###################### Begin Relation Routes ###########################################################################
+    Route::get('one-To-one', 'RelationsController@oneToOne');
+    Route::get('one-To-one-reverse', 'RelationsController@oneToOneReverse');
+    Route::get('get-user-has-phone', 'RelationsController@getUserHasPhone');
+    Route::get('get-user-not-has-phone', 'RelationsController@getUserNotHasPhone');
+###################### End Relation Routes #############################################################################
 });
+

@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eee166c8-5338-4481-9fc8-8f14a30dec99" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/CustomAuthController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckAge.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/customAuth/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/front/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/RelationsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Doctors.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Hospitals.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Phone.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Listeners/IncreaseCount.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/IncreaseCount.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -213,7 +210,8 @@
       <workItem from="1622483794612" duration="5789000" />
       <workItem from="1622515479347" duration="750000" />
       <workItem from="1622580788872" duration="15979000" />
-      <workItem from="1622667427735" duration="10375000" />
+      <workItem from="1622667427735" duration="10539000" />
+      <workItem from="1622722063808" duration="8344000" />
     </task>
     <task id="LOCAL؜٠٠٠٠١" summary="rr">
       <created>1622070445532</created>
@@ -257,7 +255,13 @@
       <option name="presentableId" value="LOCAL؜٠٠٠٠٧" />
       <updated>1622598005128</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL؜٠٠٠٠٨" summary="CRUD using Ajax">
+      <created>1622678674511</created>
+      <option name="number" value="LOCAL؜٠٠٠٠٨" />
+      <option name="presentableId" value="LOCAL؜٠٠٠٠٨" />
+      <updated>1622678674511</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
