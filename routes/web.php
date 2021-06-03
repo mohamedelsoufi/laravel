@@ -126,4 +126,14 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),'middleware' => [ 'lo
         Route::get('edit/{id}', 'OfferController@edit')->name('ajaxOffers.edit');
         Route::post('update', 'OfferController@update')->name('ajaxOffers.update');
     });
+
+    Route::group(['middleware' => 'CheckAge', 'namespace' => 'Auth'], function () {
+        Route::get('adults', 'CustomAuthController@adult')->name('adults');
+
+    });
+
+    Route::get('admin/admin', 'Auth\CustomAuthController@admin')->middleware('auth:admin')->name('admin');
+    Route::get('front/user', 'Auth\CustomAuthController@user')->middleware('auth:web')->name('user');
+    Route::get('admin/login', 'Auth\CustomAuthController@login')->name('login');
+    Route::post('admin/login', 'Auth\CustomAuthController@Checklogin')->name('save.admin.login');
 });

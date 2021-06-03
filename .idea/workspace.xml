@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eee166c8-5338-4481-9fc8-8f14a30dec99" name="Default Changelist" comment="CRUD using Ajax">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/OfferController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/offers/1622587813.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/offers/1622588109.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/offers/1622588713.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/offers/1622589052.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/offers/1622589204.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/offers/1622589375.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/ajaxOffers/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/ajaxOffers/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/ajaxOffers/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="eee166c8-5338-4481-9fc8-8f14a30dec99" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/CustomAuthController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckAge.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/customAuth/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/front/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/statics.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/statics.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/statics.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/statics.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -161,17 +157,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\starter\resources\views\admin" />
+      <recent name="C:\xampp\htdocs\starter\resources\views\front" />
+      <recent name="C:\xampp\htdocs\starter\resources\views\customAuth" />
       <recent name="C:\xampp\htdocs\starter\resources\views" />
       <recent name="C:\xampp\htdocs\starter\public\css" />
-      <recent name="C:\xampp\htdocs\starter\app\Traits" />
-      <recent name="C:\xampp\htdocs\starter\resources\views\offers" />
-      <recent name="C:\xampp\htdocs\starter\resources\views\emails" />
     </key>
   </component>
   <component name="RunManager">
@@ -216,7 +212,8 @@
       <workItem from="1622463605836" duration="8748000" />
       <workItem from="1622483794612" duration="5789000" />
       <workItem from="1622515479347" duration="750000" />
-      <workItem from="1622580788872" duration="15686000" />
+      <workItem from="1622580788872" duration="15979000" />
+      <workItem from="1622667427735" duration="10375000" />
     </task>
     <task id="LOCAL؜٠٠٠٠١" summary="rr">
       <created>1622070445532</created>
@@ -254,7 +251,13 @@
       <option name="presentableId" value="LOCAL؜٠٠٠٠٦" />
       <updated>1622488940320</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL؜٠٠٠٠٧" summary="CRUD using Ajax">
+      <created>1622598005128</created>
+      <option name="number" value="LOCAL؜٠٠٠٠٧" />
+      <option name="presentableId" value="LOCAL؜٠٠٠٠٧" />
+      <updated>1622598005128</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
