@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eee166c8-5338-4481-9fc8-8f14a30dec99" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/seeders/gg.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/doctors/doctors.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/doctors/hospitals.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RelationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RelationsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Doctors.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Doctor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Hospitals.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Hospital.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="eee166c8-5338-4481-9fc8-8f14a30dec99" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -211,7 +202,7 @@
       <workItem from="1622580788872" duration="15979000" />
       <workItem from="1622667427735" duration="10539000" />
       <workItem from="1622722063808" duration="8723000" />
-      <workItem from="1622897610943" duration="11418000" />
+      <workItem from="1622897610943" duration="11737000" />
     </task>
     <task id="LOCAL؜٠٠٠٠١" summary="rr">
       <created>1622070445532</created>
@@ -267,7 +258,13 @@
       <option name="presentableId" value="LOCAL؜٠٠٠٠٩" />
       <updated>1622731769875</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL؜٠٠٠١٠" summary="Db Relations">
+      <created>1622910060650</created>
+      <option name="number" value="LOCAL؜٠٠٠١٠" />
+      <option name="presentableId" value="LOCAL؜٠٠٠١٠" />
+      <updated>1622910060650</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
