@@ -5,21 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Hospitals extends Model
+class Doctor extends Model
 {
     use HasFactory;
 
-    public $timestamps = true;
-    protected $table = 'hospitals';
-    protected $fillable = ['name', 'address', 'created_at', 'updated_at'];
+    //public $timestamps = true;
+    protected $table = 'doctors';
+    protected $fillable = ['name', 'title', 'hospital_id', 'created_at', 'updated_at', 'gender'];
     protected $hidden = ['created_at', 'updated_at'];
 
 
     ######### Begin relation ###########################
 
-    public function doctor()
+    public function hospital()
     {
-        return $this->hasMany('App\Models\Doctor', 'hospital_id', 'id');
+        return $this->belongsTo('App\Models\Hospital', 'hospital_id', 'id');
     }
     ######### End relation #############################
 }
