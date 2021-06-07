@@ -33,45 +33,45 @@
                                 <label for="name_ar" class="form-label">{{__('statics.OfferName_ar')}}</label>
                                 <input type="text" name="name_ar" value="{{$offerWithID -> name_ar}}"
                                        class="form-control" id="name_ar" aria-describedby="name_ar">
-                                @error('name_ar')
-                                <small class="form-text text-danger"> {{$message}} </small>
-                                @enderror
+
+                                <small id="name_ar_error" class="form-text text-danger"> </small>
+
                             </div>
 
                             <div class="mb-3">
                                 <label for="name_en" class="form-label">{{__('statics.OfferName_en')}}</label>
                                 <input type="text" name="name_en" value="{{$offerWithID->name_en}}" class="form-control"
                                        id="name_en" aria-describedby="name_en">
-                                @error('name_en')
-                                <small class="form-text text-danger"> {{$message}} </small>
-                                @enderror
+
+                                <small id="name_en_error" class="form-text text-danger"> </small>
+
                             </div>
 
                             <div class="mb-3">
                                 <label for="offerPrice" class="form-label">{{__('statics.OfferPrice')}}</label>
                                 <input type="text" name="price" value="{{$offerWithID->price}}" class="form-control"
                                        id="offerPrice" aria-describedby="offerPrice">
-                                @error('price')
-                                <small class="form-text text-danger"> {{$message}} </small>
-                                @enderror
+
+                                <small id="price_error" class="form-text text-danger"> </small>
+
                             </div>
 
                             <div class="mb-3">
                                 <label for="details_ar" class="form-label">{{__('statics.OfferDetails_ar')}}</label>
                                 <input type="text" name="details_ar" value="{{$offerWithID->details_ar}}"
                                        class="form-control" id="details_ar" aria-describedby="details_ar">
-                                @error('details_ar')
-                                <small class="form-text text-danger"> {{$message}} </small>
-                                @enderror
+
+                                <small id="details_ar_error" class="form-text text-danger"> </small>
+
                             </div>
 
                             <div class="mb-3">
                                 <label for="details_en" class="form-label">{{__('statics.OfferDetails_en')}}</label>
                                 <input type="text" name="details_en" value="{{$offerWithID->details_en}}"
                                        class="form-control" id="details_en" aria-describedby="details_en">
-                                @error('details_en')
-                                <small class="form-text text-danger"> {{$message}} </small>
-                                @enderror
+
+                                <small id="details_en_error" class="form-text text-danger"> </small>
+
                             </div>
 
 
@@ -88,6 +88,11 @@
     <script>
         $(document).on('click', '#update_offer', function (e) {
             e.preventDefault();
+            $('#name_ar_error').text('');
+            $('#name_en_error').text('');
+            $('#price_error').text('');
+            $('#details_ar_error').text('');
+            $('#details_en_error').text('');
             let formData = new FormData($('#offer_form')[0]);
             $.ajax({
                 type: "post",
@@ -104,7 +109,10 @@
                     }
                 },
                 error: function (reject) {
-                    $('#error_msg').show();
+                    var response = $.parseJSON(reject.responseText);
+                    $.each(response.errors, function (key, val) {
+                        $("#" + key + "_error").text(val[0]);
+                    });
                 }
             });
         });

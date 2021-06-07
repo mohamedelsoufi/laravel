@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eee166c8-5338-4481-9fc8-8f14a30dec99" name="Default Changelist" comment="" />
+    <list default="true" id="eee166c8-5338-4481-9fc8-8f14a30dec99" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Models/Service.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/doctors/services.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RelationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RelationsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Doctor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Doctor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ajaxOffers/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ajaxOffers/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ajaxOffers/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ajaxOffers/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/doctors/doctors.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/doctors/doctors.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -202,7 +212,10 @@
       <workItem from="1622580788872" duration="15979000" />
       <workItem from="1622667427735" duration="10539000" />
       <workItem from="1622722063808" duration="8723000" />
-      <workItem from="1622897610943" duration="11737000" />
+      <workItem from="1622897610943" duration="11848000" />
+      <workItem from="1622925317220" duration="71000" />
+      <workItem from="1623020523243" duration="5042000" />
+      <workItem from="1623069230286" duration="5534000" />
     </task>
     <task id="LOCAL؜٠٠٠٠١" summary="rr">
       <created>1622070445532</created>
@@ -264,7 +277,13 @@
       <option name="presentableId" value="LOCAL؜٠٠٠١٠" />
       <updated>1622910060650</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL؜٠٠٠١١" summary="Db Relations">
+      <created>1622910164492</created>
+      <option name="number" value="LOCAL؜٠٠٠١١" />
+      <option name="presentableId" value="LOCAL؜٠٠٠١١" />
+      <updated>1622910164492</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

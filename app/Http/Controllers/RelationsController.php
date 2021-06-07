@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Doctor;
 use App\Models\Hospital;
 use App\Models\Phone;
+use App\Models\Service;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -113,5 +114,39 @@ class RelationsController extends Controller
         $hospital->doctors()->delete();
         $hospital->delete();
         return redirect()->back();
+    }
+
+    /// many to many relation
+    public function getDoctorService()
+    {
+        return $doctor = Doctor::with('services')->find(2);
+//        return $doctor->services;
+    }
+
+    public function getServiceDoctors()
+    {
+        return $service = Service::with('doctors')->find(2);
+//        return $doctor->services;
+    }
+
+    public function getDoctorServices($id)
+    {
+        $doctor = Doctor::find($id);
+        $services = $doctor->services;
+
+        $docts = Doctor::select('id', 'name')->get();
+        $sers = Service::select('id', 'name')->get();
+        return view('doctors.services', compact('services', 'docts', 'sers'));
+    }
+
+    public function SaveServicesToDoctor(Request $request)
+    {
+        $doctor = Doctor::find($request->doctor_id);
+        if (!$doctor)
+            return abort('404');
+//        $doctor->services()->attach($request->service_id);
+//        $doctor->services()->sync($request->service_id);
+        $doctor->services()->syncWithoutDetaching($request->service_id);
+        return 'success';
     }
 }
