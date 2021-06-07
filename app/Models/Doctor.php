@@ -11,7 +11,7 @@ class Doctor extends Model
 
     //public $timestamps = true;
     protected $table = 'doctors';
-    protected $fillable = ['name', 'title', 'hospital_id', 'created_at', 'updated_at', 'gender'];
+    protected $fillable = ['name', 'title', 'hospital_id', 'medical_id', 'created_at', 'updated_at', 'gender'];
     protected $hidden = ['created_at', 'updated_at', 'pivot'];
 
 

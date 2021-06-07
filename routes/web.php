@@ -176,5 +176,10 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),'middleware' => [ 'lo
     Route::get('doctor-services/{id}', 'RelationsController@getDoctorServices')->name('doctor.services');
     Route::post('save-services-to-doctor', 'RelationsController@SaveServicesToDoctor')->name('save.doctor.services');
 ###################### End Relation Many To Many Routes  ###############################################################
+
+###################### Begin Relation has one through Routes  ##########################################################
+    Route::get('has-one-through', 'RelationsController@getPatientDoctor');
+    Route::get('has-many-through', 'RelationsController@getCountryDoctors');
+###################### End Relation has one throughy Routes  ###########################################################
 });
 

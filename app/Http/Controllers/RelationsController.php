@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Country;
 use App\Models\Doctor;
 use App\Models\Hospital;
+use App\Models\Patient;
 use App\Models\Phone;
 use App\Models\Service;
 use App\Models\User;
 use Illuminate\Http\Request;
+use PHPUnit\Framework\Constraint\Count;
 
 class RelationsController extends Controller
 {
@@ -65,7 +68,7 @@ class RelationsController extends Controller
 
         $hospital = Hospital::with(['doctors' => function ($q) {
             $q->select('name', 'title', 'hospital_id');
-        }])->find(1);
+        }])->find(3);
         return response()->json($hospital);
     }
 
@@ -148,5 +151,33 @@ class RelationsController extends Controller
 //        $doctor->services()->sync($request->service_id);
         $doctor->services()->syncWithoutDetaching($request->service_id);
         return 'success';
+    }
+
+    /// has one through
+    public function getPatientDoctor()
+    {
+        $patient = Patient::with('doctors')->find(2);
+//        return $patient->doctors;
+    }
+
+    // has many through
+
+    public function getCountryDoctors()
+    {
+//        $country = Country::find(1); //has many through
+//        return $country->doctors;
+
+
+        // country with doctors
+//        $country = Country::with(['doctors'],function ($q){
+//            $q->select('name','hospital_id');
+//        })->find(1);
+//        return response()->json($country);
+
+        // country with hospitals
+        $country = Country::with(['hospitals'], function ($q) {
+            $q->select('name', 'country_id');
+        })->find(1);
+        return response()->json($country);
     }
 }
