@@ -86,7 +86,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 //     return view('landing');
 // });
 
-
+define('PAGINATION_COUNT', 2);
 
 Route::group(['prefix' => LaravelLocalization::setLocale(),'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]], function() {
     /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
@@ -111,6 +111,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),'middleware' => [ 'lo
         Route::post('store', 'CrudController@store')->name('offers.store');
         Route::get('create', 'CrudController@create')->name('offers.create');
         Route::get('index', 'CrudController@index')->name('offers.index');
+        Route::get('get-all-inactive-offers', 'CrudController@getAllInActiveOffers')->name('offers.index');
         Route::get('edit/{id}', 'CrudController@edit');
         Route::get('delete/{id}', 'CrudController@delete')->name('offers.delete');
         Route::post('update/{id}', 'CrudController@update')->name('offers.update');

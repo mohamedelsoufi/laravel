@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eee166c8-5338-4481-9fc8-8f14a30dec99" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Models/Country.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Medical.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Patient.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_06_07_144017_create_patients_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_06_07_144230_create_medicals_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Scopes/OfferScope.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/offers/1623182276.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/offers/1623182312.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/offers/1623182333.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/offers/1623182372.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RelationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RelationsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Doctor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Doctor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Hospital.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Hospital.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Offer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Offer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/pagination.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/offers/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/offers/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -155,17 +157,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/doctors" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Scopes" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\starter\app\Scopes" />
       <recent name="C:\xampp\htdocs\starter\resources\views\doctors" />
       <recent name="C:\xampp\htdocs\starter\resources\views\admin" />
       <recent name="C:\xampp\htdocs\starter\resources\views\front" />
       <recent name="C:\xampp\htdocs\starter\resources\views\customAuth" />
-      <recent name="C:\xampp\htdocs\starter\resources\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -216,7 +218,8 @@
       <workItem from="1622897610943" duration="11848000" />
       <workItem from="1622925317220" duration="71000" />
       <workItem from="1623020523243" duration="5042000" />
-      <workItem from="1623069230286" duration="9938000" />
+      <workItem from="1623069230286" duration="10089000" />
+      <workItem from="1623180947416" duration="7080000" />
     </task>
     <task id="LOCAL؜٠٠٠٠١" summary="rr">
       <created>1622070445532</created>
@@ -290,7 +293,13 @@
       <option name="presentableId" value="LOCAL؜٠٠٠١٢" />
       <updated>1623076442327</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL؜٠٠٠١٣" summary="Db Relations">
+      <created>1623080878224</created>
+      <option name="number" value="LOCAL؜٠٠٠١٣" />
+      <option name="presentableId" value="LOCAL؜٠٠٠١٣" />
+      <updated>1623080878224</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

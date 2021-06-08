@@ -6,6 +6,7 @@ use App\Events\VideoViewer;
 use App\Http\Requests\OfferRequest;
 use App\Models\Offer;
 use App\Models\Video;
+use App\Scopes\OfferScope;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -49,11 +50,19 @@ class CrudController extends Controller
 
     public function index()
     {
+//        $offers = Offer::select('id',
+//            'name_'.  LaravelLocalization::getCurrentLocale() .' as name',
+//            'price',
+//            'details_'.  LaravelLocalization::getCurrentLocale() .' as details',
+//            'image')-> get();
+//        return view('offers.index', compact('offers'));
+
+        ###########PAGINATE RESULTS #########
         $offers = Offer::select('id',
-            'name_'.  LaravelLocalization::getCurrentLocale() .' as name',
+            'name_' . LaravelLocalization::getCurrentLocale() . ' as name',
             'price',
-            'details_'.  LaravelLocalization::getCurrentLocale() .' as details',
-            'image')-> get();
+            'details_' . LaravelLocalization::getCurrentLocale() . ' as details',
+            'image')->paginate(PAGINATION_COUNT);
         return view('offers.index', compact('offers'));
     }
 
@@ -107,5 +116,17 @@ class CrudController extends Controller
 //        ];
 //    }
 
+######## scopes
+    public function getAllInActiveOffers()
+    {
+//        return $inactiveOffers = Offer::inactive()->get();
+//        return $inactiveOffers = Offer::Invalid()->get();
 
+        // global scope
+//        return $inactiveOffers = Offer::get();
+
+        //without global scope
+        return $inactiveOffers = Offer::withoutGlobalScope(OfferScope::class)->get();
+
+    }
 }

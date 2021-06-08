@@ -42,8 +42,10 @@
                             <td>{{$offer -> price}}</td>
                             <td>{{$offer -> details}}</td>
                             <td>
-                                <a href="{{URL('offers/edit/'.$offer->id)}}" class="btn btn-sm btn-outline-primary">  {{__('statics.edit')}}  </a>
-                                <a href="{{route('offers.delete',$offer->id)}}" class="btn btn-sm btn-outline-danger">  {{__('statics.delete')}}  </a>
+                                <a href="{{URL('offers/edit/'.$offer->id)}}"
+                                   class="btn btn-sm btn-outline-primary">  {{__('statics.edit')}}  </a>
+                                <a href="{{route('offers.delete',$offer->id)}}"
+                                   class="btn btn-sm btn-outline-danger">  {{__('statics.delete')}}  </a>
                             </td>
                             <td><img style="max-width: 80px;" src="{{asset('images/offers/' . $offer -> image )}}"></td>
                         </tr>
@@ -52,7 +54,9 @@
                     </table>
                 </div>
             </div>
-
+            <div class="d-flex justify-content-center">
+                {!! $offers->links() !!}
+            </div>
         </div>
     </div>
 </div>
