@@ -28,4 +28,12 @@ class Doctor extends Model
             'service_id', 'id', 'id');
     }
     ######### End relation #############################
+
+    ####### Begin Accessors
+    public function getGenderAttribute($val)
+    {
+        return $val == 1 ? 'male' : 'female';
+    }
+
+
 }

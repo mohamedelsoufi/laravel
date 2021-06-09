@@ -31,4 +31,10 @@ class Offer extends Model
     {
         static::addGlobalScope(new OfferScope);
     }
+
+    ####### Begin Mutators
+    public function setNameEnAttribute($value)
+    {
+        $this->attributes['name_en'] = strtoupper($value);
+    }
 }

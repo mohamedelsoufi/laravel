@@ -180,4 +180,16 @@ class RelationsController extends Controller
         })->find(1);
         return response()->json($country);
     }
+
+    ################# Accessors and Mutators #######################
+    public function getDoctors()
+    {
+        return $doctors = Doctor::select('id', 'name', 'gender')->get();
+//      if (isset($doctors) && $doctors->count() > 0){
+//            foreach ($doctors as $doctor){
+//                $doctor -> gender = $doctor -> gender == 1 ? 'male' : 'female';
+//            }
+//        }
+//        return $doctors;
+    }
 }

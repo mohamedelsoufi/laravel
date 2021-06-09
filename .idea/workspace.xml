@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eee166c8-5338-4481-9fc8-8f14a30dec99" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Scopes/OfferScope.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/offers/1623182276.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/offers/1623182312.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/offers/1623182333.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/offers/1623182372.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/offers/1623245019.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/offers/1623245077.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/offers/1623245177.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/offers/1623245378.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/offers/1623245616.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RelationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RelationsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Doctor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Doctor.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Offer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Offer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/pagination.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/offers/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/offers/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -219,7 +217,8 @@
       <workItem from="1622925317220" duration="71000" />
       <workItem from="1623020523243" duration="5042000" />
       <workItem from="1623069230286" duration="10089000" />
-      <workItem from="1623180947416" duration="7080000" />
+      <workItem from="1623180947416" duration="7594000" />
+      <workItem from="1623243025085" duration="3178000" />
     </task>
     <task id="LOCAL؜٠٠٠٠١" summary="rr">
       <created>1622070445532</created>
@@ -299,7 +298,13 @@
       <option name="presentableId" value="LOCAL؜٠٠٠١٣" />
       <updated>1623080878224</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL؜٠٠٠١٤" summary="Pagination &amp; local scopes and Global Scopes">
+      <created>1623188697560</created>
+      <option name="number" value="LOCAL؜٠٠٠١٤" />
+      <option name="presentableId" value="LOCAL؜٠٠٠١٤" />
+      <updated>1623188697560</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,7 +334,8 @@
     <MESSAGE value="event , listener , delete from db and arabic style" />
     <MESSAGE value="CRUD using Ajax" />
     <MESSAGE value="Db Relations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Db Relations" />
+    <MESSAGE value="Pagination &amp; local scopes and Global Scopes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pagination &amp; local scopes and Global Scopes" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

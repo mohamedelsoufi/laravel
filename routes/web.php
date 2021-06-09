@@ -182,5 +182,10 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),'middleware' => [ 'lo
     Route::get('has-one-through', 'RelationsController@getPatientDoctor');
     Route::get('has-many-through', 'RelationsController@getCountryDoctors');
 ###################### End Relation has one throughy Routes  ###########################################################
+
+
+####################### Begin Accessors and Mutators Routes  ##########################################################
+    Route::get('accessors', 'RelationsController@getDoctors');
+###################### End Accessors and Mutators Routes  ###########################################################
 });
 
